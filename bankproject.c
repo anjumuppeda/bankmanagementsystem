@@ -1,4 +1,4 @@
-#include <stdio.h>
+ #include <stdio.h>
  #include <string.h>
 
  #define MAX_ACCOUNTS 50
@@ -51,9 +51,9 @@
   return 0;
   }
 
-// Function to display in screen
+ // Function to display in screen
  
-void displayMenu()
+  void displayMenu()
  {
    printf("Bank Management System\n");
    printf("1. CreateBankAccount\n");
@@ -75,12 +75,16 @@ void displayMenu()
 
    printf("Enter the name: ");
    scanf("%s", newAccount.name);
+
    printf("Enter branch name: ");
    scanf("%s", newAccount.branch);
+
    printf("Enter UPI ID: ");
    scanf("%s", newAccount.upi);
+
    printf("Enter mobile number: ");
    scanf("%s", newAccount.mobile);
+
    printf("Enter password: ");
    scanf("%s", newAccount.password);
 
@@ -88,3 +92,35 @@ void displayMenu()
    printf("the Account Number is: %d\n", newAccount.bankaccountNumber);
  } 
  }
+ // Function to deposit money
+
+ void depositMoney()
+  {
+    int i; 
+    struct bankaccount newAccount;
+    
+    printf("Enter Account upi id: ");
+    scanf("%s",newAccount.upi);
+    
+    printf("Enter Name: ");
+    scanf("%s", newAccount.name);
+    
+    printf("Enter Branch Name: ");
+    scanf("%s",newAccount.branch);
+    
+    printf("Enter Password: ");
+    scanf("%s", newAccount.password);
+    
+    struct bankaccount accounts[MAX_ACCOUNTS];
+    for (i = 0; i < MAX_ACCOUNTS; i++) 
+    {
+     printf("Enter amount to deposit: ");
+    printf("Amount deposited successfully. New balance: %d\n", accounts[i].balance);
+     break;
+     }
+    
+
+   {
+        printf("Account verification failed. Deposit not processed.\n");
+    }
+  }
